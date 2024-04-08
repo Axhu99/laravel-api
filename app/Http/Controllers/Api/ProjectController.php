@@ -31,7 +31,7 @@ class ProjectController extends Controller
     public function show(string $id)
     {
         //cerco il post con determinate carraterisiche 
-        $project = Project::whereIsPublishedtrue(true)->find($id);
+        $project = Project::whereIsPublished(true)->find($id);
 
         //se non lo trovi mandami l'errore 
         if (!$project) return response(null, 404);
